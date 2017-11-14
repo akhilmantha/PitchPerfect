@@ -58,22 +58,22 @@
                         <outlet property="recordButton" destination="ufb-j3-wUi" id="4yd-6K-cUW"/>
                         <outlet property="recordingLabel" destination="A8u-VR-e21" id="rHL-US-GVa"/>
                         <outlet property="stopRecordingButton" destination="jxX-Gd-7i1" id="0kb-dW-vCR"/>
-                        <segue destination="xPY-1D-mch" kind="show" identifier="identifier" id="xp5-bd-wyH"/>
+                        <segue destination="xPY-1D-mch" kind="show" identifier="stopRecording" id="xp5-bd-wyH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="612" y="121"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="zba-L5-dwW">
             <objects>
-                <viewController id="xPY-1D-mch" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="u9N-EX-ywG">
+                <viewController id="xPY-1D-mch" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VRm-d8-UY3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="84F-3U-zxx"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="u2I-rQ-aXY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3u-Je-1p5" userLabel="First Responder" sceneMemberID="firstResponder"/>

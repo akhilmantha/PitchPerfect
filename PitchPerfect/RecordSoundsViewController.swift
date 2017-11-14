@@ -42,15 +42,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let recordingName = "recordedVoice.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = URL(String: pathArray.joined(separator: "/"))
+        
         let session = AVAudioSession.sharedInstance()
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with: .defaultToSpeaker)
         
-        try! audioRecorder = AVAudioRecorder(URL: .filePath!, settings: [:])
+        try! audioRecorder = AVAudioRecorder(url: filePath! , settings: [:])
         audioRecorder.delegate = self
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
-        
     }
     
     @IBAction func stopRecording(_ sender: Any) {
@@ -58,10 +58,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordButton.isEnabled = true
         stopRecordingButton.isEnabled = false
         recordingLabel.text = "Tap to record"
+        audioRecorder.stop()
+        let audioSession = AVAudioSession.sharedInstance()
+        try! audioSession.setActive(false)
     }
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
-            preformSeague(performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url))
+            performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         }
         else{
             print("recording was not successful!")
