@@ -72,7 +72,18 @@
                     <view key="view" contentMode="scaleToFill" id="VRm-d8-UY3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Apu-gb-CMi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Apu-gb-CMi" firstAttribute="top" secondItem="u2I-rQ-aXY" secondAttribute="top" id="JUe-tJ-Mzl"/>
+                            <constraint firstItem="u2I-rQ-aXY" firstAttribute="bottom" secondItem="Apu-gb-CMi" secondAttribute="bottom" id="U0J-6A-gFw"/>
+                            <constraint firstItem="u2I-rQ-aXY" firstAttribute="trailing" secondItem="Apu-gb-CMi" secondAttribute="trailing" id="i9a-5b-F3K"/>
+                            <constraint firstItem="Apu-gb-CMi" firstAttribute="leading" secondItem="u2I-rQ-aXY" secondAttribute="leading" id="z87-Q8-YJO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="u2I-rQ-aXY"/>
                     </view>
                 </viewController>

@@ -40,7 +40,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordButton.isEnabled = false
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
-        let pathArray = [dirPath, recordingName]
+        let pathArray = [dirPath,recordingName]
         let filePath = URL(String: pathArray.joined(separator: "/"))
         
         let session = AVAudioSession.sharedInstance()
