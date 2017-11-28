@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VXc-sR-lYo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VXc-sR-lYo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -73,16 +73,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Apu-gb-CMi">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ur8-X1-foa">
+                                <rect key="frame" x="132" y="233" width="110" height="200"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Apu-gb-CMi" firstAttribute="top" secondItem="u2I-rQ-aXY" secondAttribute="top" id="JUe-tJ-Mzl"/>
-                            <constraint firstItem="u2I-rQ-aXY" firstAttribute="bottom" secondItem="Apu-gb-CMi" secondAttribute="bottom" id="U0J-6A-gFw"/>
-                            <constraint firstItem="u2I-rQ-aXY" firstAttribute="trailing" secondItem="Apu-gb-CMi" secondAttribute="trailing" id="i9a-5b-F3K"/>
-                            <constraint firstItem="Apu-gb-CMi" firstAttribute="leading" secondItem="u2I-rQ-aXY" secondAttribute="leading" id="z87-Q8-YJO"/>
+                            <constraint firstItem="ur8-X1-foa" firstAttribute="leading" secondItem="u2I-rQ-aXY" secondAttribute="leading" constant="132" id="J2u-cC-IsW"/>
+                            <constraint firstItem="u2I-rQ-aXY" firstAttribute="trailing" secondItem="ur8-X1-foa" secondAttribute="trailing" constant="133" id="So5-8v-TcK"/>
+                            <constraint firstItem="u2I-rQ-aXY" firstAttribute="bottom" secondItem="ur8-X1-foa" secondAttribute="bottom" constant="234" id="dy7-4V-wEx"/>
+                            <constraint firstItem="ur8-X1-foa" firstAttribute="top" secondItem="u2I-rQ-aXY" secondAttribute="top" constant="169" id="zBU-Od-RiZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u2I-rQ-aXY"/>
                     </view>
