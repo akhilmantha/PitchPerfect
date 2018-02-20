@@ -10,6 +10,9 @@ import UIKit
 import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
+    
+    
+    var audioRecorder : AVAudioRecorder!
 
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
@@ -25,14 +28,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         print("view will appear called!!!")
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     //Properties
-    var audioRecorder : AVAudioRecorder!
 
     @IBAction func recordAudio(_ sender: Any) {
         recordingLabel.text = "Recording in progress"
@@ -68,6 +65,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
         else{
             print("recording was not successful!")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "stop recording"{
+            let playSoundsVC = segue.destination as! PlaySoundsViewController
+            let recordedAudioURL = sender as! URL
+            playSoundsVC.recordedAudioURL = recordedAudioURL
         }
     }
     
