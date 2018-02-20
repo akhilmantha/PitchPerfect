@@ -29,6 +29,29 @@ class PlaySoundsViewController: UIViewController {
     enum ButtonType: Int {
         case slow = 0, fast, chipmunk, vader, echo, reverb
     }
+    
+    //MARK : - View Controller Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //Setting the aspect to fit to avoid Streching of images in landscape mode
+        snailButton.imageView?.contentMode = .scaleAspectFit
+        chipmunkButton.imageView?.contentMode = .scaleAspectFit
+        rabbitButton.imageView?.contentMode = .scaleAspectFit
+        vaderButton.imageView?.contentMode = .scaleAspectFit
+        echoButton.imageView?.contentMode = .scaleAspectFit
+        reverbButton.imageView?.contentMode = .scaleAspectFit
+        
+        setupAudio()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureUI(.notPlaying)
+    }
+    
+    
     @IBAction func playSoundForButton(_ sender: UIButton){
         print("Play Sound button pressed")
         switch(ButtonType(rawValue: sender.tag)!) {
@@ -52,13 +75,5 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func stopButtonPressed(_ sender: UIButton){
         print("Stop audio button pressed")
         stopAudio()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        configureUI(.notPlaying)
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupAudio()
     }
 }
