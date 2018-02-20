@@ -18,6 +18,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
     
+    
+    //MARK : - View Controller Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         stopRecordingButton.isEnabled = false
@@ -28,8 +31,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         print("view will appear called!!!")
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     
-    //Properties
+    //MARK : -  Properties
 
     @IBAction func recordAudio(_ sender: Any) {
         recordingLabel.text = "Recording in progress"
@@ -69,7 +75,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "stop recording"{
+        if segue.identifier == "stopRecording"{
             let playSoundsVC = segue.destination as! PlaySoundsViewController
             let recordedAudioURL = sender as! URL
             playSoundsVC.recordedAudioURL = recordedAudioURL
